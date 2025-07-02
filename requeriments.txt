@@ -1,0 +1,4 @@
+# Nenhuma biblioteca externa necessária
+# Este projeto usa apenas Python padrão (std lib)
+# Desenvolvido e testado com:
+python>=3.10 

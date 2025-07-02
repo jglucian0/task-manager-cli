@@ -36,6 +36,7 @@ Escolha uma opção:
 ---
 
 ## 🧱 Estrutura do Projeto
+```
 task_manager/
 │
 ├── main.py                 # Ponto de entrada do sistema
@@ -53,7 +54,7 @@ task_manager/
 │
 └── interface/
     └── menu.py             # Menu de interação com o usuário (CLI)
-
+```
 ---
 
 ## 🛠️ Tecnologias Utilizadas

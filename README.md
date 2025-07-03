@@ -2,6 +2,9 @@
 
 Um gerenciador de tarefas 100% feito em Python puro com interface no terminal. Projeto focado em aplicar e consolidar conhecimentos reais de programação, incluindo: organização modular com pacotes, programação orientada a objetos (POO), manipulação de arquivos JSON e boas práticas de estruturação de código.
 
+## 📷 Demonstração
+![Demonstração do Projeto](demo/demo.gif)
+
 ---
 
 ## 🚀 Funcionalidades
@@ -17,22 +20,6 @@ Um gerenciador de tarefas 100% feito em Python puro com interface no terminal. P
 - [x] Salvamento automático em arquivo JSON
 - [x] Menu interativo e limpo no terminal
 
----
-
-## 📷 Demonstração
-
-```bash
-====== Gerenciador de Tarefas ======
-1. Adicionar tarefa
-2. Listar tarefas
-3. Concluir tarefa
-4. Editar tarefa
-5. Remover tarefa
-6. Filtrar tarefas
-0. Sair
-====================================
-Escolha uma opção:
-```
 ---
 
 ## 🧱 Estrutura do Projeto

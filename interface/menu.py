@@ -14,7 +14,7 @@ def exibir_menu():
 
 
 def capturar_dados_tarefa():
-    titulo = input('Título da tarefa: ')
+    titulo = input('\nTítulo da tarefa: ')
     data = input('Data limite (dd/mm/aaaa): ')
     prioridade = int(input('Prioridade (1-5): '))
     return Task(titulo, data, prioridade)
@@ -35,22 +35,25 @@ def menu():
             elif escolha == '3':
                 if not gerenciador.tarefas:
                     print('\n⚠️  Nenhuma tarefa cadastrada.')
+                    gerenciador.limpar_tela()
                 else:
                     gerenciador.listar_tarefa()
                     try:
                         indice = int(
-                            input('Digite o número da tarefa para concluir: ')) - 1
+                            input('\nDigite o número da tarefa para concluir: ')) - 1
                         gerenciador.concluir_tarefa(indice)
                     except (ValueError, TypeError):
                         print('\n⚠️  Entra iválida.')
+                        gerenciador.limpar_tela()
             elif escolha == '4':
                 if not gerenciador.tarefas:
                     print('\n⚠️  Nenhuma tarefa cadastrada.')
+                    gerenciador.limpar_tela()
                 else:
                     gerenciador.listar_tarefa()
                     try:
                         indice = int(
-                            input('Digite o número da tarefa para editar: ')) - 1
+                            input('\nDigite o número da tarefa para editar: ')) - 1
                         if 0 <= indice <= len(gerenciador.tarefas):
                             titulo = input(
                                 'Novo título (ou Enter para manter): ').strip() or None
@@ -64,26 +67,39 @@ def menu():
                                 indice, titulo, data, prioridade)
                         else:
                             print('\n⚠️  Entrada iválida.')
+                            gerenciador.limpar_tela()
                     except (ValueError, TypeError):
                         print('\n⚠️  Entrada iválida.')
+                        gerenciador.limpar_tela()
             elif escolha == '5':
                 if not gerenciador.tarefas:
                     print('\n⚠️  Nenhuma tarefa cadastrada.')
+                    gerenciador.limpar_tela()
                 else:
                     gerenciador.listar_tarefa()
                     try:
                         indice = int(
-                            input('Digite o número da tarefa para remover: ')) - 1
-                        if 0 < indice < len(gerenciador.tarefas):
+                            input('\nDigite o número da tarefa para remover: ')) - 1
+                        if 0 <= indice < len(gerenciador.tarefas):
                             gerenciador.remover_tarefa(indice)
                         else:
                             ('\n⚠️  Entrada iválida.')
+                            gerenciador.limpar_tela()
                     except (ValueError, TypeError):
                         print('\n⚠️  Entrada iválida.')
+                        gerenciador.limpar_tela()
             elif escolha == '0':
                 print('\n👋 Saindo do programa...')
+                gerenciador.limpar_tela()
                 break
             else:
                 print('\n⚠️  Opção iválida, tente novamente.')
+                gerenciador.limpar_tela()
         except (ValueError, TypeError):
             print('\n⚠️  Entrada iválida.')
+            gerenciador.limpar_tela()
+        except KeyboardInterrupt:
+            print('\n⚠️  Usuário interrompeu o programa.')
+            print('👋 Saindo do programa...')
+            gerenciador.limpar_tela()
+            break

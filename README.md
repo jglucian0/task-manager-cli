@@ -104,4 +104,4 @@ python main.py
 ## 👤 Autor
 
 João Gabriel Luciano
-🔗 GitHub — 🔗 LinkedIn
+🔗 [GitHub](https://github.com/jglucian0) — 🔗 [LinkedIn](https://www.linkedin.com/in/jgluciano/)

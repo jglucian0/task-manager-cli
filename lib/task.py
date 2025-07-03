@@ -9,7 +9,7 @@ class Task:
 
     # Implementa os métodos da classe
     def concluir(self):  # Altera estado da task
-        self.prioridade = True
+        self.concluido = True
 
     def to_dict(self):  # Converete os dados em um dicionário para leitura JSON
         return {
@@ -39,6 +39,6 @@ class Task:
         task.concluido = dado['concluido']
         return task
 
-    def __stf__(self):  # Verificação basica do estado para impressão da Taks
+    def __str__(self):  # Verificação basica do estado para impressão da Taks
         status = "✅ Concluída" if self.concluido else "❌ Pendente"
         return f'[{status}] Titulo: {self.titulo} | Prazo: {self.data_limite} | Prioridade: {self.prioridade}'
